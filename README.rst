@@ -3,7 +3,7 @@ Remix: HTTP for Super Humans
 
 Remix is a collection of mixins for the requests library.
 
-He's aim to reduce the repetitions of common tasks with REST API,
+Remix aim to reduce the repetitions of common tasks with REST API,
 making them more resilient and faster.
 
 Features
