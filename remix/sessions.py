@@ -21,7 +21,7 @@ class BaseRemixSession(sessions.Session):
         "User-Agent": "python-remix/%s" % __version__
     }
 
-    def __init__(self, base_url=None, auth=None, trailing_slash=False, headers=None):
+    def __init__(self, base_url=None, auth=None, trailing_slash=None, headers=None):
         self._tdata = threading.local()
 
         cls_headers = copy.copy(self.headers)
@@ -31,7 +31,7 @@ class BaseRemixSession(sessions.Session):
 
         self.base_url = base_url or self.base_url
         self.auth = auth or cls_auth
-        self.trailing_slash = trailing_slash or self.trailing_slash
+        self.trailing_slash = trailing_slash if isinstance(trailing_slash, bool) else self.trailing_slash
         self.headers.update(headers or cls_headers)
 
     def get_url(self, url, params=None):
