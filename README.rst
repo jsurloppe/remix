@@ -13,6 +13,8 @@ Features
 - Iterators from pagination.
 - Async requests.
 
+Tested on Python 2.7 and 3.4, need testing but probably work on more versions.
+
 Basic example :
 
 .. code-block:: python
