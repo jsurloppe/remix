@@ -149,6 +149,7 @@ TODO:
 - Stream response.
 - More intuitive way to return either response or iterator.
 - doc and docstrings.
+- use slice (and drop max_iter in favor)
 
 While working on the above features, the current implementations may or not be modified, be careful when upgrading on the early releases.
 
